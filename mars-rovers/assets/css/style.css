@@ -1,0 +1,239 @@
+/* Shared colors and sizing */
+:root {
+  --background: #121820;
+  --surface: #1d2733;
+  --text: #f3f4f6;
+  --muted: #c3cbd5;
+  --accent: #ffb088;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  line-height: 1.7;
+  background-color: var(--background);
+  color: var(--text);
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+a {
+  color: var(--accent);
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+/* Make keyboard focus easy to see */
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 5px;
+}
+
+/* Hidden until someone reaches it with the Tab key */
+.skip-link {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  padding: 12px 18px;
+  background-color: var(--text);
+  color: var(--background);
+  transform: translateY(-200%);
+  z-index: 10;
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+/* Header and navigation */
+.site-header {
+  padding: 32px 0;
+  background-color: var(--surface);
+  border-bottom: 3px solid var(--accent);
+}
+
+.site-name {
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.site-header p {
+  margin-top: 0;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 0;
+  margin: 24px 0 0;
+  list-style: none;
+}
+
+nav a {
+  display: block;
+  padding: 10px 18px;
+  border: 1px solid var(--accent);
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+nav a:hover,
+nav a[aria-current="page"] {
+  background-color: var(--accent);
+  color: var(--background);
+}
+
+/* Main content */
+main {
+  padding-top: 48px;
+  padding-bottom: 64px;
+}
+
+.hero {
+  max-width: 800px;
+  padding: 32px 0;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: clamp(2.2rem, 6vw, 4rem);
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: var(--muted);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Footer */
+.site-footer {
+  padding: 32px 0;
+  background-color: var(--surface);
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+/* Adjust spacing on smaller screens */
+@media (max-width: 600px) {
+  .site-header {
+    padding: 24px 0;
+  }
+
+  nav ul {
+    gap: 8px;
+  }
+
+  nav a {
+    padding: 10px 12px;
+  }
+
+  main {
+    padding-top: 24px;
+    padding-bottom: 40px;
+  }
+}
+/* More compact header and introduction */
+.site-header {
+  padding: 20px 0;
+}
+
+.site-name {
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+}
+main {
+  padding-top: 28px;
+  padding-bottom: 40px;
+}
+.hero {
+  padding: 16px 0 24px;
+}
+h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+}
+.hero p {
+  font-size: 1.1rem;
+}
+.hero-image {
+  margin: 24px 0 0;
+}
+.hero-image img {
+  width: 100%;
+  border-radius: 4px;
+}
+.hero-image figcaption {
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+/* Mission cards */
+.rover-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  margin-top: 24px;
+}
+
+.rover-card {
+  padding: 24px;
+  background-color: var(--surface);
+  border-top: 3px solid var(--accent);
+  border-radius: 4px;
+}
+
+.rover-card h3 {
+  margin-top: 0;
+}
+
+@media (max-width: 600px) {
+  .rover-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* Light colors */
+body.light-mode {
+  --background: #faf7f2;
+  --surface: #eee6dc;
+  --text: #20252b;
+  --muted: #454c54;
+  --accent: #943b16;
+}
+
+/* Color switch button */
+#theme-toggle {
+  margin-top: 20px;
+  padding: 10px 16px;
+  border: 1px solid currentColor;
+  border-radius: 4px;
+  background-color: transparent;
+  color: var(--text);
+  font: inherit;
+  cursor: pointer;
+}

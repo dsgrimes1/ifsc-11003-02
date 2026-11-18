@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore NASA's Mars rover missions and learn how Curiosity and Perseverance investigate the Red Planet.">
+  <meta name="author" content="Derrick Grimes">
+  <title>Mars Rovers | Exploring the Red Planet</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/script.js" defer></script>
+</head>
+
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container">
+      <p class="site-name">Mars Rovers</p>
+      <p>Two missions exploring Mars.</p>
+
+      <nav aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="curiosity.html">Curiosity</a></li>
+          <li><a href="perseverance.html">Perseverance</a></li>
+        </ul>
+      </nav><button id="theme-toggle" type="button" aria-pressed="false" hidden>
+  Light mode
+</button>
+    </div>
+  </header>
+
+  <main id="main-content" class="container">
+    <section class="hero">
+      <h1>Robotic Explorers of Mars</h1>
+      <p>
+        How do we explore a planet millions of miles away?
+        Meet the rovers helping scientists investigate Mars.
+      </p>
+
+      <figure class="hero-image">
+        <img
+          src="assets/images/rover.jpg"
+          alt="Curiosity rover on rocky Martian terrain at the Mojave drilling site."
+        >
+        <figcaption>
+          Curiosity at the Mojave drilling site.
+          Image credit: NASA/JPL-Caltech/MSSS.
+          <a href="https://science.nasa.gov/resource/curiosity-self-portrait-at-mojave-site-on-mount-sharp/">
+            View the original image
+          </a>
+        </figcaption>
+      </figure>
+    </section>
+
+    <section aria-labelledby="missions-heading">
+      <h2 id="missions-heading">Meet the Rovers</h2>
+      <p>
+        Mars rovers are robotic vehicles that explore the surface of Mars.
+        They carry cameras and scientific instruments to study rocks,
+        investigate the environment, and help us understand the planet.
+      </p>
+
+      <div class="rover-grid">
+        <article class="rover-card">
+          <h3>Curiosity</h3>
+          <p>
+            Curiosity investigates whether Mars once had conditions
+            that could support microbial life. Its instruments allow
+            scientists to examine rocks and soil in Gale Crater.
+          </p>
+          <a href="curiosity.html">Explore the Curiosity mission</a>
+        </article>
+
+        <article class="rover-card">
+          <h3>Perseverance</h3>
+          <p>
+            Perseverance explores Jezero Crater, searching for signs
+            of ancient microbial life and collecting rock samples
+            for potential return to Earth.
+          </p>
+          <a href="perseverance.html">Explore the Perseverance mission</a>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p><a href="mailto:dsgrimes1@ualr.edu">Email me</a></p>
+      <p>
+        <a href="https://science.nasa.gov/mars/">
+          Explore NASA's Mars resources
+        </a>
+      </p>
+      <p>
+        This website was created as a student project for educational
+        purposes. NASA is not affiliated with or endorsing this work.
+      </p>
+    </div>
+  </footer>
+</body>
+</html>
